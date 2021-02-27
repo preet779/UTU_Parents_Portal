@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <item android:id="@+id/menu_college"
+    <item android:id="@+id/college"
         android:icon="@drawable/ic_college"
         android:title="College"/>
 
 
-    <item android:id="@+id/menu_parent"
+    <item android:id="@+id/parent"
         android:icon="@drawable/ic_parent"
         android:title="Parent Zone"/>
 
 
-    <item android:id="@+id/menu_message"
+    <item android:id="@+id/message"
         android:icon="@drawable/ic_message"
         android:title="Messages"/>
 

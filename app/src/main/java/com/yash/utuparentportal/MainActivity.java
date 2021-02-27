@@ -2,16 +2,20 @@ package com.yash.utuparentportal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    BottomNavigationView bnv;
+
 
 
     @Override
@@ -19,28 +23,44 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.Framecontainer,new CollegeFragment()).commit();
 
-        bnv=(BottomNavigationView)findViewById(R.id.bottomNavigation);
-        bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+       // Toolbar toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+        //getSupportActionBar().setTitle("Uka Tarsadia University");
+
+
+
+        BottomNavigationView bottomNavigationView =(BottomNavigationView)findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.college);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item)
-            {
-                Fragment temp = null;
-                switch (item.getItemId())
-                {
-                    case R.id.menu_college : temp = new CollegeFragment();
-                        break;
-                    case R.id.menu_parent : temp = new ParentFragment();
-                        break;
-                    case R.id.menu_message : temp = new MessageFragment();
-                        break;
-                }
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.Framecontainer,temp).commit();
-                return true;
+                switch (menuItem.getItemId()) {
+                        case R.id.college:
+                        return true;
+
+                        case R.id.parent:
+                        startActivity(new Intent(getApplicationContext(), ParentActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                        case R.id.message:
+                        startActivity(new Intent(getApplicationContext(), MessageActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+                return false;
             }
         });
 
+
+
     }
-}
+
+
+        }
+
+
+

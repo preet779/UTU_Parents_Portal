@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1060649349692",
+    "project_id": "utu-parents-portal-3e9f4",
+    "storage_bucket": "utu-parents-portal-3e9f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060649349692:android:249c65482c188ee6eb4939",
+        "android_client_info": {
+          "package_name": "com.yash.utuparentportal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060649349692-mkblt0vfpcokc8vm5avdlsghaqcr5sed.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yash.utuparentportal",
+            "certificate_hash": "08e79d84c125d1a185fd1cda01bee709c1468e43"
+          }
+        },
+        {
+          "client_id": "1060649349692-p9upjhhfsuf55gmlekl8qupain4b8t9b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtKMAh8_ICXztllj1X0b8_SH08aojxveA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060649349692-p9upjhhfsuf55gmlekl8qupain4b8t9b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
